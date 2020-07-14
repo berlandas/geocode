@@ -40,6 +40,25 @@ Please note that if you `which pip`, it should point to `.venv` subfolder.
 * https://developers.google.com/maps/gmp-get-started
 * Create a trial account (300$ free credit)
 
+## Sample implementation
+
+The purpose of this project is to provide the walking distance between locations.
+
+This can be achieved using the Directions GoogleMapsApi ([see](https://github.com/googlemaps/google-maps-services-python/blob/6682591dda6f987b193bb9b3bdb8e9d50397d651/googlemaps/directions.py#L39-L41)).
+
+### Simplest implementation
+
+The flow could be the following:
+
+1. Provide the target destination lat long
+2. Parse/stream a CSV input
+3. Foreach lat long, request the walking direction
+4. Write the result line by line
+
+### Enhancements
+
+* Store the results into a db (e.g. [SQLite](https://sqlite.org/index.html)): this database is a binary file which can be committed and you may just query origins you haven't calculated yet
+* Investigate alternative APIs providing walking distance or alternative approaches (e.g. [Bing API](https://docs.microsoft.com/en-us/bingmaps/rest-services/routes/?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fbingmaps%2Frest-services%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2FBingMaps%2Fbreadcrumb%2Ftoc.json), [Pedometer](https://gmap-pedometer.com/))
 
 ## References
 
