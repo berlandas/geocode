@@ -35,10 +35,11 @@ $ source .venv/bin/activate
 
 Please note that if you `which pip`, it should point to `.venv` subfolder.
 
-#### Retrive google api key and secret
+#### Retrieve google api key and secret
 
 * https://developers.google.com/maps/gmp-get-started
 * Create a trial account (300$ free credit)
+* copy `.env.example` to `.env` and set the correct value for GOOGLE_API_KEY
 
 ## Sample implementation
 
@@ -64,4 +65,4 @@ The flow could be the following:
 
 * https://github.com/googlemaps/google-maps-services-python
 * https://virtualenv.pypa.io/en/stable/
-
+* https://pypi.org/project/python-dotenv/
